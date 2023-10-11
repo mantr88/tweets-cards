@@ -1,4 +1,3 @@
-import React from "react";
 import { Header, Link } from "./Navigation.styled";
 
 function Navigation() {

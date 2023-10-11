@@ -1,5 +1,11 @@
+import CardList from "../components/CardList/CardList";
+
 function Tweets() {
-  return <div>Tweets</div>;
+  return (
+    <>
+      <CardList />
+    </>
+  );
 }
 
 export default Tweets;

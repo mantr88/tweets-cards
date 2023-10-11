@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.tsx";
@@ -8,11 +7,12 @@ import Tweets from "./pages/Tweets.tsx";
 import ErrorComponenet from "./components/ErrorComponent/ErrorComponenet.tsx";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./helpers/theme.ts";
+import MainLayout from "./layouts/MainLayout/MainLayout.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/tweets-cards/",
-    element: <App />,
+    element: <MainLayout />,
     errorElement: <ErrorComponenet />,
     children: [
       {
