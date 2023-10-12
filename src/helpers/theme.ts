@@ -8,6 +8,6 @@ export const theme: DefaultTheme = {
     accent: "#5cd3a8",
     bgColor: "#fff",
     darkTextColor: "#373737",
-    fairTextClor: "#ebd8ff",
+    fairTextColor: "#ebd8ff",
   },
 };

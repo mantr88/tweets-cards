@@ -7,9 +7,10 @@ export const Header = styled.header`
   justify-content: center;
   gap: 16px;
   padding: 8px 0;
+  margin-bottom: 24px;
 
   :not(:last-child) {
-    margin-right: 12px;
+    margin-right: 24px;
   }
 
   > nav {
@@ -25,7 +26,7 @@ export const Link = styled(NavLink)`
   font-weight: 500;
 
   &.active {
-    color: ${(p) => p.theme.colors.whiteText};
-    background-color: ${(p) => p.theme.colors.main};
+    color: ${(p) => p.theme.colors.fairTextColor};
+    background-color: ${(p) => p.theme.colors.primary};
   }
 `;
