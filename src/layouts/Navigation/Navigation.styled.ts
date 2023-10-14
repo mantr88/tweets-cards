@@ -19,7 +19,8 @@ export const Header = styled.header`
 `;
 
 export const Link = styled(NavLink)`
-  padding: 8px 16px;
+  padding: 12px 16px;
+  margin-top: 12px;
   border-radius: 4px;
   text-decoration: none;
   color: ${(p) => p.theme.colors.darkText};

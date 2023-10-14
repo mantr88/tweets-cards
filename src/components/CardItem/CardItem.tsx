@@ -30,11 +30,6 @@ function CardItem({ user }: Props) {
     useGrouping: true,
   });
 
-  console.log(
-    "🚀 ~ file: CardItem.tsx:34 ~ CardItem ~ visibleNumberFollowers:",
-    visibleNumberFollowers
-  );
-
   return (
     <GridItems>
       <Wrap>
