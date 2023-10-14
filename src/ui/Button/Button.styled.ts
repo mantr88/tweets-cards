@@ -5,7 +5,6 @@ export const MainButton = styled.button`
   padding: 14px 28px;
   border-radius: 10px;
   border: none;
-  background: ${(p) => p.theme.colors.secondary};
   box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
 
   color: ${(p) => p.theme.colors.darkTextColor};

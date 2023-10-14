@@ -2,10 +2,12 @@ import { MainButton } from "./Button.styled";
 
 type Props = {
   children: string;
+  style: object;
+  onClick?: () => void;
 };
 
-function Button({ children }: Props) {
-  return <MainButton>{children}</MainButton>;
+function Button({ children, ...otherProps }: Props) {
+  return <MainButton {...otherProps}>{children}</MainButton>;
 }
 
 export default Button;

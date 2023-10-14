@@ -45,12 +45,13 @@ export const Line = styled.div`
 export const InfoWrap = styled.div`
   position: absolute;
   top: 284px;
-  left: 76px;
+  left: 86px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 export const InfoText = styled.p`
+  margin-bottom: 16px;
   color: #ebd8ff;
   font-family: Montserrat;
   font-size: 20px;

@@ -20,7 +20,8 @@ export const toggleFollowed = createAsyncThunk(
   "users/toggleFollowed",
   async (user: User, ThunkAPI) => {
     try {
-      const response = await axios.put(`user/${user.id}`, {
+      const response = await axios.put(`tweets/${user.id}`, {
+        followers: !user.isFollowed ? user.followers + 1 : user.followers - 1,
         isFollowed: !user.isFollowed,
       });
       return response.data;

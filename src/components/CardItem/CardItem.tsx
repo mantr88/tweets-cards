@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import { User } from "../../Types/types";
 import Button from "../../ui/Button/Button";
 import {
@@ -10,10 +11,30 @@ import {
   Line,
   Wrap,
 } from "./CardItem.styled";
+import { toggleFollowed } from "../../redux/operations";
 type Props = {
   user: User;
 };
 function CardItem({ user }: Props) {
+  const dispatch = useDispatch();
+
+  const clickBtnHandler = () => {
+    dispatch(toggleFollowed(user));
+  };
+
+  const btnBgChoosingColor = user.isFollowed
+    ? { backgroundColor: "#5CD3A8" }
+    : { backgroundColor: "#EBD8FF" };
+
+  const visibleNumberFollowers = user.followers.toLocaleString("en-US", {
+    useGrouping: true,
+  });
+
+  console.log(
+    "🚀 ~ file: CardItem.tsx:34 ~ CardItem ~ visibleNumberFollowers:",
+    visibleNumberFollowers
+  );
+
   return (
     <GridItems>
       <Wrap>
@@ -23,10 +44,12 @@ function CardItem({ user }: Props) {
         </AvatarWrap>
         <InfoWrap>
           <InfoText>{user.tweets} TWEETS</InfoText>
-          <InfoText>{user.followers} FOLLOWERS</InfoText>
+          <InfoText>{visibleNumberFollowers} FOLLOWERS</InfoText>
         </InfoWrap>
-        <BtnWrap>
-          <Button>Follow</Button>
+        <BtnWrap onClick={clickBtnHandler}>
+          <Button style={btnBgChoosingColor}>
+            {user.isFollowed ? "Following" : "Follow"}
+          </Button>
         </BtnWrap>
       </Wrap>
     </GridItems>
