@@ -3,6 +3,7 @@ export type User = {
   tweets: number;
   followers: number;
   avatar: string;
+  isFollowed: boolean;
   id: string;
 };
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Logo from "../../../public/Logo.png";
-import BgPicture from "../../../public/picture.png";
+import Logo from "../../assets/Logo.png";
+import BgPicture from "../../assets/picture.png";
 
 export const GridItems = styled.li`
   width: 380px;
