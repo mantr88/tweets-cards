@@ -12,11 +12,12 @@ import {
   Wrap,
 } from "./CardItem.styled";
 import { toggleFollowed } from "../../redux/operations";
+import { AnyAction, ThunkDispatch } from "@reduxjs/toolkit";
 type Props = {
   user: User;
 };
 function CardItem({ user }: Props) {
-  const dispatch = useDispatch();
+  const dispatch: ThunkDispatch<User, User, AnyAction> = useDispatch();
 
   const clickBtnHandler = () => {
     dispatch(toggleFollowed(user));

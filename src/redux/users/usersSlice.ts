@@ -1,13 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { fetchUsers, toggleFollowed } from "../operations";
-import { User, Users } from "../../Types/types";
-import { SerializedError } from "@reduxjs/toolkit/dist/createAsyncThunk";
-
-type UsersSliceState = {
-  items: Users;
-  isLoading: boolean;
-  error: null | string;
-};
+import { User, Users, UsersSliceState } from "../../Types/types";
+import {
+  AnyAsyncThunk,
+  RejectedWithValueActionFromAsyncThunk,
+} from "@reduxjs/toolkit/dist/matchers";
 
 const initialState: UsersSliceState = {
   items: [],
@@ -21,18 +18,7 @@ const pendingReducer = (state: UsersSliceState) => {
 
 const rejectedReducer = (
   state: UsersSliceState,
-  action: PayloadAction<
-    null,
-    string,
-    {
-      arg: void;
-      requestId: string;
-      requestStatus: "rejected";
-      aborted: boolean;
-      condition: boolean;
-    } & ({ rejectedWithValue: true } | ({ rejectedWithValue: false } & object)),
-    SerializedError
-  >
+  action: RejectedWithValueActionFromAsyncThunk<AnyAsyncThunk>
 ) => {
   state.isLoading = false;
   state.error = action.payload;

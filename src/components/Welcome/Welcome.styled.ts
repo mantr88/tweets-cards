@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 
 export const PageWrap = styled.div`
   height: 100vh;
-  background: url(${BgImg}) 45px 30px;
+  background: url(${BgImg});
 `;
 export const PageContainer = styled.div`
   position: absolute;
   top: 15%;
-  left: 5%;
+  left: 7%;
   display: flex;
   flex-direction: column;
   width: 600px;

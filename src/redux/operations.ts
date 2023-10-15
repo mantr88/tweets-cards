@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { User } from "../Types/types";
+import { User, Users } from "../Types/types";
 
 axios.defaults.baseURL = "https://6526d939917d673fd76d177e.mockapi.io/api/v1/";
 
@@ -9,9 +9,9 @@ export const fetchUsers = createAsyncThunk(
   async (_, ThunkAPI) => {
     try {
       const response = await axios.get("tweets");
-      return response.data;
+      return response.data as Users;
     } catch (error) {
-      return ThunkAPI.rejectWithValue((error as Error).message as string);
+      return ThunkAPI.rejectWithValue("Failed to fetch users.");
     }
   }
 );
@@ -24,9 +24,9 @@ export const toggleFollowed = createAsyncThunk(
         followers: !user.isFollowed ? user.followers + 1 : user.followers - 1,
         isFollowed: !user.isFollowed,
       });
-      return response.data;
+      return response.data as User;
     } catch (error) {
-      return ThunkAPI.rejectWithValue("Failed to fetch users.");
+      return ThunkAPI.rejectWithValue("Failed to update date users.");
     }
   }
 );
