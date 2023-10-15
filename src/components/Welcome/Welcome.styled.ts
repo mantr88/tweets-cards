@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import BgImg from "../../assets/twitter-6-meses-elon-musk-3024446.webp";
 import { NavLink } from "react-router-dom";
 
 export const PageWrap = styled.div`
   padding: 50px;
   height: 100vh;
   width: 100vw;
-  background: url(${BgImg});
+  background: linear-gradient(
+    115deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  );
+  color: ${(p) => p.theme.colors.secondary};
 `;
 export const PageContainer = styled.div`
   margin-bottom: 200px;
@@ -27,9 +32,6 @@ export const OtherText = styled.p`
 `;
 
 export const Link = styled(NavLink)`
-  /* position: absolute;
-  top: 85%;
-  left: 40%; */
   display: flex;
   gap: 16px;
 
