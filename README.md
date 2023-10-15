@@ -4,4 +4,6 @@ This web site for interacting with your followers on Twitter (now X 🤦‍♂�
 
 It uses its own backend built on the mockapi.io service. The technologies used in the creation of this web application: TypeScript, React, Redux, React-Router-Dom, Axios, Styled-Components, React-Select.
 
+Link https://mantr88.github.io/tweets-cards/
+
 ![Alt text](<Знімок екрана 2023-10-15 о 04.20.39.png>)
