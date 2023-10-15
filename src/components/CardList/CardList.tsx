@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { State, StatusFilters, User, Users } from "../../Types/types";
+import { State, User, Users } from "../../Types/types";
 import CardItem from "../CardItem/CardItem";
 import { GridContainer } from "./CardList.styled";
 import Button from "../../ui/Button/Button";
