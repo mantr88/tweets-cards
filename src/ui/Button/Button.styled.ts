@@ -14,4 +14,10 @@ export const MainButton = styled.button`
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+
+  &:hover {
+    letter-spacing: 1px;
+    transition: all 0.5s ease 0s;
+    scale: 1.1;
+  }
 `;
