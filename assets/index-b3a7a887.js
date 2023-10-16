@@ -142,6 +142,12 @@ Error generating stack: `+i.message+`
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+
+  &:hover {
+    letter-spacing: 1px;
+    transition: all 0.5s ease 0s;
+    scale: 1.1;
+  }
 `;function p1({children:e,...t}){return z.jsx($2,{...t,children:e})}const _2="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAAWCAYAAABqgnq6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKGSURBVHgB1VixThtBEJ2L4sJICVJIQREKUpDiGkdK4xRpqPPHSZPCFCmSAgosAcVRuMANBS7OknnvbhaNlzvvnsF4edLIe765vd2nmTezly0Wi5+yfdzB/mRZVrY5YJ1f8fNJtow3kgZ2YAN5BUiFMGIfUfRFEkdKhBFHIG1fEkZqhBEDkLYjiSJFwnqwIUjrSYJ4G+k3h13AprAZrC+1UB/A9hr8b2GF+pfqf6AWA1cE/sp6mMDOdHwI+6zjE6krchu4zu8r7kcRRoJGKPn2RRyTjAKRcIRfK9Zj+J57c1T+8B3rgvoSRlUEGuaKwdytF3PM7Tq8fSwBvhJCKCWXyGKawHY9jdk148JuUP0ffHWekdQRGwMWgdiojAHX/lHtIeXdf9KcLUsIRdiNIYsb/yG1xvD6Uup0s1VtbBbBNMh1zDlOOBcN10zv2BYih/9UngffzPg3rNR9DSUSoQi7NmNqCskiKf+l1qmZjhkxtx65uXnWb0y7EFAVAYnX240itAib7053piDmxjqpjpUNvtLy30y6IRON7G0jFGFWq9wm+4yghrL/3owZfb5OWZJiRN+B84ykO8kbQYgwK4JMPS6aqXUsjwWyp8Ipeog+Nfdc6jp0EfLTVZXtpRFKyUOQUDixxvUv1aey5csCU7NKV9xny8F+qGc3rM/HHn/YohSSEEIR5rrupdbAkqUHZnd/D9cDl670ayBrKHF6NFmzB9soYioPN3nMSJO6g57rc0xJppa/+ar7h/+V1FomAf8m+CncFR/0+xnxrsUn16a2U/Xt4tz1aJPLeqhEftXHxMj3hw7wa30VSfHw/S8lkfeRGmEU+YkkjJQIS1LkfaRC2FNF/sVwDzHOB2t0D1rCAAAAAElFTkSuQmCC",N2="/tweets-cards/assets/picture-9f4b25d6.png",j2=Le.li`
   width: 380px;
   height: 460px;
