@@ -8,7 +8,6 @@ import {
   GridItems,
   InfoText,
   InfoWrap,
-  Line,
   Wrap,
 } from "./CardItem.styled";
 import { toggleFollowed } from "../../redux/operations";
@@ -34,7 +33,6 @@ function CardItem({ user }: Props) {
   return (
     <GridItems>
       <Wrap>
-        <Line></Line>
         <AvatarWrap>
           <Avatar src={user.avatar} alt={user.user} />
         </AvatarWrap>
