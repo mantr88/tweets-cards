@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "../../assets/Logo.png";
 import BgPicture from "../../assets/picture.png";
+import Circle from "../../ui/Circle/Circle";
 
 export const GridItems = styled.li`
   width: 380px;
@@ -21,16 +22,28 @@ export const AvatarWrap = styled.div`
   position: absolute;
   top: -36px;
   left: 150px;
+`;
+
+export const Ellipse = styled(Circle)`
   width: 60px;
   height: 60px;
   border: 10px solid ${(p) => p.theme.colors.secondary};
+  fill-rule: #ebd8ff;
+  box-shadow: 0px 4.39163px 3.29372px 0px #fbf8ff inset,
+    0px -2.19582px 4.39163px 0px #ae7be3 inset;
+  filter: drop-shadow(
+    0px 4.391631126403809px 4.391631126403809px rgba(0, 0, 0, 0.06)
+  );
   border-radius: 50%;
   background-color: ${(p) => p.theme.colors.primary};
 `;
 
 export const Avatar = styled.img`
-  width: 60px;
-  height: 60px;
+  position: absolute;
+  top: 9px;
+  left: 14px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
 `;
 

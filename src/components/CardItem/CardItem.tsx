@@ -5,6 +5,7 @@ import {
   Avatar,
   AvatarWrap,
   BtnWrap,
+  Ellipse,
   GridItems,
   InfoText,
   InfoWrap,
@@ -12,9 +13,11 @@ import {
 } from "./CardItem.styled";
 import { toggleFollowed } from "../../redux/operations";
 import { AnyAction, ThunkDispatch } from "@reduxjs/toolkit";
+
 type Props = {
   user: User;
 };
+
 function CardItem({ user }: Props) {
   const dispatch: ThunkDispatch<User, User, AnyAction> = useDispatch();
 
@@ -34,6 +37,7 @@ function CardItem({ user }: Props) {
     <GridItems>
       <Wrap>
         <AvatarWrap>
+          <Ellipse />
           <Avatar src={user.avatar} alt={user.user} />
         </AvatarWrap>
         <InfoWrap>
