@@ -29,6 +29,7 @@ export const MainText = styled.h1`
 export const OtherText = styled.p`
   font-size: 26px;
   font-weight: 600;
+  line-height: 1.5;
 `;
 
 export const Link = styled(NavLink)`

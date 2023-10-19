@@ -25,6 +25,10 @@ const router = createBrowserRouter([
         path: "/tweets-cards/tweets",
         element: <Tweets />,
       },
+      {
+        path: "*",
+        element: <ErrorComponenet />,
+      },
     ],
   },
 ]);
