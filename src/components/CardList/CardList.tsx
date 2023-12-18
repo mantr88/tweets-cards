@@ -38,18 +38,22 @@ function CardList() {
         ))}
       </GridContainer>
       {visibleItems < users.length && filteredUsers.length > 3 && (
-        <Button
-          onClick={loadMoreHandler}
-          style={{
-            backgroundColor: "#5CD3A8",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            marginTop: "36px",
-          }}
-        >
-          Load more
-        </Button>
+        <div style={{ position: "relative" }}>
+          <Button
+            onClick={loadMoreHandler}
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "50%",
+              transform: "translate(-50%)",
+              backgroundColor: "#5cd3a8",
+              display: "block",
+              marginTop: "36px",
+            }}
+          >
+            Load more
+          </Button>
+        </div>
       )}
     </>
   );
