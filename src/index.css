@@ -6,7 +6,7 @@ body {
   background-color: #fff;
 
   width: 1440px;
-  min-height: 80vh;
+  height: 100vh;
   letter-spacing: 0.02em;
   font-size: 14px;
   line-height: 1.2;

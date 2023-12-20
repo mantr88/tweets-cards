@@ -48,10 +48,17 @@ function Filter() {
               : isFocused
               ? "#ebd8ff"
               : undefined,
-            // color: isSelected ? "#fff" : "#373737",
+            borderColor: "green",
           }),
           singleValue: (base) => ({ ...base, ...dot("#5736a3") }),
         }}
+        theme={(theme) => ({
+          ...theme,
+          colors: {
+            ...theme.colors,
+            primary: "#5736a3",
+          },
+        })}
       ></Select>
     </FilterContainer>
   );
