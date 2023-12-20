@@ -1,10 +1,12 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { fetchUsers, toggleFollowed } from "../operations";
-import { User, Users, UsersSliceState } from "../../Types/types";
 import {
   AnyAsyncThunk,
   RejectedWithValueActionFromAsyncThunk,
 } from "@reduxjs/toolkit/dist/matchers";
+import persistReducer from "redux-persist/es/persistReducer";
+import storage from "redux-persist/lib/storage";
+import { fetchUsers, toggleFollowed } from "../operations";
+import { User, Users, UsersSliceState } from "../../Types/types";
 
 const initialState: UsersSliceState = {
   items: [],
@@ -59,4 +61,11 @@ export const usersSlice = createSlice({
   },
 });
 
-export const usersReducer = usersSlice.reducer;
+const usersReducer = usersSlice.reducer;
+
+const persistConfig = {
+  key: "users",
+  storage,
+};
+
+export const persistedUserReducer = persistReducer(persistConfig, usersReducer);

@@ -9,7 +9,8 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./helpers/theme.ts";
 import MainLayout from "./layouts/MainLayout/MainLayout.tsx";
 import { Provider } from "react-redux";
-import { store } from "./redux/store.ts";
+import { persistor, store } from "./redux/store.ts";
+import { PersistGate } from "redux-persist/integration/react";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <RouterProvider router={router} />
+        <PersistGate persistor={persistor} loading={<div>Loading...</div>}>
+          <RouterProvider router={router} />
+        </PersistGate>
       </Provider>
     </ThemeProvider>
   </React.StrictMode>
