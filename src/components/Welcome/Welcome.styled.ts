@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 export const PageWrap = styled.div`
   padding: 50px;
-  height: 100vh;
   width: 100vw;
   background: linear-gradient(
     115deg,
