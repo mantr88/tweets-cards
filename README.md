@@ -1,6 +1,6 @@
 Tweet cards
 
-This web site for interacting with your followers on Twitter (now X 🤦‍♂️). On Tweets page have created interactive cards that allow you to subscribe or unsubscribe by clicking on the "FOLLOW/FOLLOWING" button
+This a little service for interacting with your followers on Twitter (now X 🤦‍♂️). On Tweets page have created interactive cards that allow you to subscribe or unsubscribe by clicking on the "FOLLOW/FOLLOWING" button
 
 It uses its own backend built on the mockapi.io service. The technologies used in the creation of this web application: TypeScript, React, Redux, React-Router-Dom, Axios, Styled-Components, React-Select.
 
